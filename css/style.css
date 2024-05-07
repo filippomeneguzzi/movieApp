@@ -1,0 +1,321 @@
+
+:root{
+    /* 
+    COLORS
+    */
+    --purple:#3c096c;
+    --white:#F5F1F1;
+    --black:#000000;
+    --green:#C0F440;
+    --blue:#091832;
+    
+    
+    /* FONT SIZE */
+    --fs-xs: 1.4rem;
+    --fs-s: 1.5rem;
+    --fs-m: 1.8rem;
+    --fs-l: 2rem;
+    --fs-lg: 2.6rem;
+    --fs-xl: 5rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 10px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+}
+
+body{
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+
+/* NAVBAR */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    background-color: var(--blue);
+    height: 10vh;
+    padding: 20px;
+    z-index: 100;
+}
+.logo{
+    font-size: var(--fs-m);
+    z-index: 2;
+}
+.logo a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+.searchContainer{
+}
+
+.searchContainer input{
+    margin-right: 10px;
+    height: 30px;
+    border-radius: 2rem;
+    border: none;
+    padding: 5px;
+}
+#searchButton{
+    height: 30px;
+    width: 80px;
+    font-weight: 800;
+    background-color: var(--green);
+    border: 2px solid var(--green);
+    color: var(--blue);
+    border-radius: 2rem;
+}
+.linkContainer{
+    position: absolute;
+    height: 0px;
+    top: 0vh;
+    left: 0px;
+    width: 100%;
+    background-color: var(--blue);
+    transition: 0.2s;
+    overflow: hidden;
+}
+.navTitle{
+    font-size: var(--fs-lg);
+    text-align: center;
+    padding-bottom: 3.5rem;
+}
+.links{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    list-style-type: none;
+    row-gap: 2rem;
+    font-size: var(--fs-s);
+}
+.links a:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+.links a {
+    color: var(--white);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#hamburger{
+    display: block;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.line{
+    display: block;
+    width: 25px;
+    height: 3px;
+    border-radius: 4px;
+    background-color: var(--white);
+    margin: 3px 0;
+    transition: transform 0.3s ease;
+    transform: rotate(0deg);
+}
+.line2{
+    width: 17px;
+    position: relative;
+    left: 8px;
+}
+
+.showMenu{
+    height: 100vh;
+    padding-top: 10rem;
+}
+
+/* animazione hamburger menu */
+#hamburger:nth-child(1){
+    top: 0;
+}
+#hamburger:nth-child(2){
+    top: 8px;
+}
+#hamburger:nth-child(3){
+    top: 19.5px;
+}
+
+#hamburger.open span:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+#hamburger.open span:nth-child(2){
+    opacity: 0;
+}
+#hamburger.open span:nth-child(3){
+    transform: translateY(-4.5px) rotate(-45deg);
+}
+
+
+/* header */
+#headerHomePage{
+    display: flex;
+    padding-top: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+.cardHeader{
+    display: flex;
+    justify-content: center;
+    height: 80%;
+    width: 80%;
+}
+.cardHeader img{
+    height: 100%;
+    width: 80%;
+    object-fit: cover;
+    border-radius: 4rem;
+}
+.containerHeader{
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    top: 25%;
+    padding: 3rem;
+    max-width: 50%;
+}
+.containerHeader h2{
+    font-size: var(--fs-xl);
+    padding-bottom: 20px;
+}
+
+@media screen and (min-width:770px) and (max-width:992px){
+    .containerHeader{
+        display: block;
+    }
+}
+@media screen and (min-width:993px){
+    .containerHeader{
+        display: block;
+    }
+}
+
+/* facciamo una lista di film tipo netflix */
+.film_list{
+    padding: 40px;
+}
+.film_list h2{
+    font-size: var(--fs-lg);
+    padding-bottom: 30px;
+}
+.item{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+    /* grid-template-columns: repeat(6, 1fr); */
+    gap: 40px;
+}
+.item h2{
+    padding: 10px;
+    font-size: var(--fs-m);
+}
+.cardFilm{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 200px;
+}
+.cardFilm img{
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+}
+.contentCard{
+}
+.contentCard p{
+    padding: 10px;
+}
+.contentCard p:nth-child(3){
+    color: var(--green);
+}
+
+/* search */
+.searchMovieList{
+    display: none;
+    padding: 100px 40px;
+}
+.cardFilmSearch{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 200px;
+}
+.cardFilmSearch img{
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+}
+.contentCardSearch{
+}
+.contentCardSearch p{
+    padding: 10px;
+}
+.contentCardSearch p:nth-child(3){
+    color: var(--green);
+}
+
+
+/* film */
+.itemAnimation, .itemComedy,
+ .itemHorror, .itemRomance, .generalItem, .itemSearch{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+    /* grid-template-columns: repeat(6, 1fr); */
+    gap: 40px;
+}
+.itemAnimation h2, .itemComedy h2,
+ .itemHorror h2, .itemRomance h2, .generalItem h2, .itemSearch h2{
+    padding: 10px;
+    font-size: var(--fs-m);
+}
+
+
+
+
+@media screen and (min-width:770px) and (max-width:992px){
+   .item, .itemAnimation, .itemComedy,
+    .itemHorror, .itemRomance,.generalItem, .itemSearch{
+        grid-template-columns: repeat(3, 1fr);
+   }
+
+   
+}
+@media screen and (min-width:993px){
+    .item, .itemAnimation, .itemComedy,
+    .itemHorror, .itemRomance, .generalItem, .itemSearch{
+        grid-template-columns: repeat(5, 1fr);
+   }
+
+}
+
+
+/* seconda pagina html lista */
+.showList{
+    padding: 100px 40px;
+}
+
+#footer{
+    display: none;
+    justify-content: space-around;
+    height: 20vh;
+    align-items: center;
+    background-color: var(--green);
+    color: var(--blue);
+    font-size: var(--fs-m);
+}

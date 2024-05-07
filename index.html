@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <title>Movie app</title>
+    <!-- my css -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <h2 class="logo"><a href="#">MovieHub</a></h2>
+
+        <div class="searchContainer">
+            <input type="text" id="searchInput" placeholder="Search for a movie...">
+            <button id="searchButton" >Search</button>
+        </div>
+
+        <div class="linkContainer">
+            <h2 class="navTitle">FILM</h2>
+            <ul class="links">
+                <!-- qui compariranno i generi presi con una fetch-->
+            </ul>
+        </div>
+
+        <div id="hamburger">
+            <span class="line"></span>
+            <span class="line line2"></span>
+            <span class="line"></span>
+        </div>
+    </nav>
+  
+    <!-- HEADER WITH MOST POPULAR FILM -->
+    <header id="headerHomePage">
+    </header>
+
+
+    <section class="searchMovieList">
+
+        <div class="itemSearch">
+            
+        </div>
+    </section>
+
+
+
+    <!-- section with film -->
+    <section class="film_list">
+        <h2>Popular</h2>
+        
+        <div class="item">
+            <!-- CREO CARD DINAMICA -->
+        </div>
+    </section>
+
+    <!-- section with animation -->
+    <section class="film_list">
+        <h2 id="animationHome">Animation</h2>
+        
+        <div class="itemAnimation">
+            <!-- CREO CARD DINAMICA -->
+        </div>
+    </section>
+
+    <!-- section with comedy -->
+    <section class="film_list">
+        <h2>Comedy</h2>
+        
+        <div class="itemComedy">
+            <!-- CREO CARD DINAMICA -->
+        </div>
+    </section>
+
+
+    <!-- section with horror -->
+    <section class="film_list">
+        <h2>Horror</h2>
+        
+        <div class="itemHorror">
+            <!-- CREO CARD DINAMICA -->
+        </div>
+    </section>
+
+    <!-- section with romance -->
+    <section class="film_list">
+        <h2>Romance</h2>
+        
+        <div class="itemRomance">
+            <!-- CREO CARD DINAMICA -->
+        </div>
+    </section>
+
+
+    <footer id="footer">
+        <h2>MovieApp</h2>
+
+        <p>Copyright 2024 Filippo Meneguzzi</p>
+    </footer>
+
+    <!-- my js for fetch -->
+    <script type="module" src="/js/api.js"></script>
+    <!-- my js for event page-->
+    <script src="/js/main.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- my css -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+     <!-- NAVBAR -->
+     <nav>
+        <h2 class="logo"><a href="index.html">MovieHub</a></h2>
+
+        <div class="searchContainer">
+            <input type="text" id="searchInput" placeholder="Search for a movie...">
+            <button id="searchButton">Search</button>
+        </div>
+
+        <div class="linkContainer">
+            <h2 class="navTitle">FILM</h2>
+            <ul class="links">
+                <!-- qui compariranno i generi presi con una fetch-->
+            </ul>
+        </div>
+
+        <div id="hamburger">
+            <span class="line"></span>
+            <span class="line line2"></span>
+            <span class="line"></span>
+        </div>
+    </nav>
+
+    <section class="searchMovieList">
+
+        <div class="itemSearch">
+            
+        </div>
+    </section>
+
+    <section class="showList">
+        <div class="generalItem">
+            <!-- CREO CARD DINAMICA -->
+        </div>
+    </section>
+
+
+    <footer id="footer">
+        <h2>MovieApp</h2>
+
+        <p>Copyright 2024 Filippo Meneguzzi</p>
+    </footer>
+    <!-- my js -->
+    <script src="/js/main.js"></script>
+    <script type="module" src="/js/api.js"></script>
+</body>
+</html>
